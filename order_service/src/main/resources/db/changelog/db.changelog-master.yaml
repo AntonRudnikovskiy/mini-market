@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/V001__order.sql
+  - include:
+      file: db/changelog/changeset/V002__customer.sql
+  - include:
+      file: db/changelog/changeset/V003__orderItem.sql
+  - include:
+      file: db/changelog/changeset/V004__product.sql
