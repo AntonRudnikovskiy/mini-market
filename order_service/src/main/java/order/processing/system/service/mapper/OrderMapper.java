@@ -19,14 +19,14 @@ public abstract class OrderMapper {
     @Autowired
     private OrderItemRepository orderItemRepository;
 
-    @Mapping(source = "orderItems", target = "orderItemsIds", qualifiedByName = "mapOrderDtoToOrderItemsIds")
+    @Mapping(source = "orderItems", target = "orderItemsIds", qualifiedByName = "mapOrderItemsToOrderItemsId")
     public abstract OrderDto toDto(Order order);
 
-    @Mapping(source = "orderItemsIds", target = "orderItems", qualifiedByName = "mapOrderIdsToOrders")
+    @Mapping(source = "orderItemsIds", target = "orderItems", qualifiedByName = "mapOrderItemsIdToOrderItems")
     public abstract Order toEntity(OrderDto order);
 
-    @Named("mapOrderDtoToOrderItemsIds")
-    protected List<Long> mapOrderDtoToOrderItemsIds(List<OrderItem> orderItems) {
+    @Named("mapOrderItemsToOrderItemsId")
+    protected List<Long> mapOrderItemsToOrderItemsId(List<OrderItem> orderItems) {
         if (orderItems == null) {
             return Collections.emptyList();
         }
@@ -35,8 +35,8 @@ public abstract class OrderMapper {
         return list;
     }
 
-    @Named("mapOrderIdsToOrders")
-    protected List<OrderItem> mapOrderIdsToOrders(List<Long> orderItemsIds) {
+    @Named("mapOrderItemsIdToOrderItems")
+    protected List<OrderItem> mapOrderItemsIdToOrderItems(List<Long> orderItemsIds) {
         if (orderItemsIds == null) {
             return Collections.emptyList();
         }

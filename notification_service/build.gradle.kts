@@ -3,7 +3,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
     implementation("org.apache.kafka:kafka-clients")
 
     implementation("org.liquibase:liquibase-core")
@@ -28,4 +27,6 @@ dependencies {
     implementation("javax.cache:cache-api")
     implementation("org.hibernate.orm:hibernate-jcache")
     implementation("org.ehcache:ehcache")
+
+    implementation("com.sendgrid:sendgrid-java:4.7.1")
 }

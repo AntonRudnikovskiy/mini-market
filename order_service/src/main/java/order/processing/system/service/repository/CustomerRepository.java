@@ -7,9 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-
-    @Query(nativeQuery = true, value = """
-            SELECT EXISTS(SELECT 1 FROM customer WHERE id = :customerId)
-            """)
-    boolean existsByCustomerId(long customerId);
 }

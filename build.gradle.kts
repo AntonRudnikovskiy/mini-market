@@ -35,8 +35,10 @@ allprojects {
             dependency("org.springframework.boot:spring-boot-starter-web:$springframeworkBoot")
             dependency("org.springframework.boot:spring-boot-starter-validation:$springframeworkBoot")
             dependency("org.springframework.boot:spring-boot-configuration-processor:$springframeworkBoot")
-            dependency("org.springframework.boot:spring-boot-starter-security:$springframeworkBoot")
             dependency("org.springframework.boot:spring-boot-starter-data-jpa:$springframeworkBoot")
+            dependency("org.springframework.cloud:spring-cloud-starter-openfeign:4.0.2")
+            dependency("org.springframework.retry:spring-retry:2.0.2")
+            dependency("org.apache.kafka:kafka-clients:3.7.1")
 
             dependency("org.liquibase:liquibase-core:4.28.0")
             dependency("org.postgresql:postgresql:42.7.3")

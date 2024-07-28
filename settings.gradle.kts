@@ -12,3 +12,4 @@ pluginManagement {
         id("com.google.cloud.tools.jib") version jib
     }
 }
+include("notification_service")

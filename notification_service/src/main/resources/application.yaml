@@ -1,0 +1,27 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: notification
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    topics:
+      notification-publication: notification-publication
+    consumer:
+      group-id: notification-group
